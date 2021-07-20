@@ -28,7 +28,11 @@
   },
   "dependencies": {
     "gatsby": "3.9.1",
+    "gatsby-plugin-image": "^1.10.0",
     "gatsby-plugin-layout": "^2.9.0",
+    "gatsby-plugin-sharp": "^3.10.0",
+    "gatsby-source-filesystem": "^3.10.0",
+    "gatsby-transformer-sharp": "^3.10.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "tsconfig-paths-webpack-plugin": "3.5.1"
@@ -41,6 +45,7 @@
     "@types/react-dom": "17.0.9",
     "@typescript-eslint/eslint-plugin": "4.28.3",
     "@typescript-eslint/parser": "4.28.3",
+    "autoprefixer": "^10.3.1",
     "babel-plugin-root-import": "6.6.0",
     "commitizen": "4.2.4",
     "cz-conventional-changelog": "3.3.0",
@@ -54,14 +59,21 @@
     "eslint-plugin-prettier": "3.4.0",
     "eslint-plugin-react": "7.24.0",
     "eslint-plugin-react-hooks": "4.2.0",
+    "gatsby-plugin-postcss": "^4.9.0",
     "husky": "6.0.0",
     "lint-staged": "11.0.1",
+    "postcss": "^8.3.5",
     "prettier": "2.3.2",
+    "tailwindcss": "^2.2.4",
     "typescript": "4.3.5"
   },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "volta": {
+    "node": "14.17.3",
+    "yarn": "1.22.10"
   }
 }

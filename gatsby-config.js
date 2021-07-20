@@ -1,5 +1,16 @@
 module.exports = {
-  // Since `gatsby-plugin-typescript` is automatically included in Gatsby you
-  // don't need to define it here (just if you need to change the options)
-  plugins: [`gatsby-plugin-layout`],
+  plugins: [
+    `gatsby-plugin-layout`,
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/assets/`,
+      },
+    },
+  ],
 };

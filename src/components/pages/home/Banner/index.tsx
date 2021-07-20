@@ -1,9 +1,5 @@
 import * as React from 'react';
 
-interface IBannerProps {
-  y: string;
-}
-
-const Banner: React.FunctionComponent<IBannerProps> = (props) => null;
+const Banner: React.FunctionComponent = () => null;
 
 export default Banner;

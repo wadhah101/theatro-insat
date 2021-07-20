@@ -1,11 +1,11 @@
 import * as React from 'react';
 
 const Footer: React.FC = () => (
-  <footer>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quidem
-    reiciendis odio! Quas accusantium dolor deserunt, ex sed voluptatum
-    necessitatibus molestiae maiores, fugit, nemo enim. Voluptatum aspernatur
-    atque doloribus at.
+  <footer className="flex py-20 bg-black ">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dicta at
+    eaque consequuntur! Perferendis dolore voluptatum vero quaerat soluta
+    ratione, veniam consequuntur quam! Consectetur ea ex provident culpa unde.
+    Minus!
   </footer>
 );
 
