@@ -1,10 +1,10 @@
 import { NavLink } from './classes/NavLink';
 
 export const navigationLinks: NavLink[] = [
-  new NavLink(``, `home`),
-  new NavLink(``, `about`),
-  new NavLink(``, `jti`),
-  new NavLink(``, `something`),
-  new NavLink(``, `events`),
-  new NavLink(``, `other`),
+  new NavLink(``, `Acceuil`),
+  new NavLink(``, `Theatro`),
+  new NavLink(``, `Events`),
+  new NavLink(``, `Oeuvres`),
+  new NavLink(``, `Nouveautes`),
+  new NavLink(``, `JTU`),
 ];

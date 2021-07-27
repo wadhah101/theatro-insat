@@ -6,7 +6,7 @@ interface IBannerProps {}
 const Banner: React.FunctionComponent<IBannerProps> = () => (
   <div className="relative h-screen bg-black">
     <StaticImage
-      src="../../../../../assets/IMG_4098.JPG"
+      src="../../../../../assets/home/banner.jpg"
       alt="Banner Image"
       placeholder="dominantColor"
       layout="fullWidth"
