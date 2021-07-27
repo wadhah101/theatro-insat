@@ -16,10 +16,10 @@ const StatelessHeader: React.FunctionComponent<IStatelessHeaderProps> = ({
 }) => (
   <header
     className={clsx(
-      `flex top-0 left-0 z-50  w-full items-center  h-24 justify-center shadow`,
+      `flex top-0 left-0 z-50  w-full items-center  h-24 justify-center`,
       fixed && `fixed`,
       absolute && `absolute`,
-      dark && ` bg-black bg-opacity-50 `,
+      // dark && ` bg-black bg-opacity-50 `,
     )}
   >
     <div className="container flex items-center">
