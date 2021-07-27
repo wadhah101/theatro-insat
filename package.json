@@ -27,6 +27,7 @@
     ]
   },
   "dependencies": {
+    "clsx": "^1.1.1",
     "gatsby": "3.9.1",
     "gatsby-plugin-image": "^1.10.0",
     "gatsby-plugin-layout": "^2.9.0",
