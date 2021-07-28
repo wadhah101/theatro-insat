@@ -30,6 +30,7 @@ const NewLineP: React.FC<{ data: string }> = ({ data }) => (
   </div>
 );
 
+// TODO find proper bg image
 const Banner: React.FunctionComponent<IBannerProps> = () => {
   const [current, setCurrent] = React.useState(0);
 
@@ -76,7 +77,7 @@ const Banner: React.FunctionComponent<IBannerProps> = () => {
             <p className="mb-2 text-2xl tracking-widest text-white text-opacity-50">
               Theatro
             </p>
-            <h1 className="mb-6 text-6xl font-medium ">
+            <h1 className="mb-6 font-serif text-6xl font-medium ">
               {elements[current].name}
             </h1>
             <div className="mb-12 ml-36 ">
@@ -103,7 +104,7 @@ const Banner: React.FunctionComponent<IBannerProps> = () => {
                       : `text-opacity-50 border-opacity-50`,
                   )}
                 >
-                  {`${String(ind + 1).padStart(2, `0`)}   ${e.name}`}
+                  {`${String(ind + 1).padStart(2, String(0))}   ${e.name}`}
                 </button>
               ))}
             </div>
@@ -111,7 +112,7 @@ const Banner: React.FunctionComponent<IBannerProps> = () => {
 
           <div className="flex-grow" />
           <div className="mt-8 ">
-            <h2 className="mb-6 text-5xl text-white "> 12 / 02 </h2>
+            <h2 className="mb-6 font-serif text-5xl text-white "> 12 / 02 </h2>
             <p className="mb-8 text-2xl text-white text-opacity-50">
               Auditorum INSAT
             </p>
