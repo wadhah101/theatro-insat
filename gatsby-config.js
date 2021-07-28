@@ -1,5 +1,6 @@
 module.exports = {
   plugins: [
+    `gatsby-plugin-web-font-loader`,
     `gatsby-plugin-layout`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-image`,

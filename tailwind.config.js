@@ -3,7 +3,12 @@ module.exports = {
   mode: 'jit',
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Lato', 'sans-serif'],
+        serif: ['Lora', 'serif'],
+      },
+    },
   },
   variants: {
     extend: {},
