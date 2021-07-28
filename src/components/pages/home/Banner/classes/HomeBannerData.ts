@@ -4,7 +4,9 @@ export class HomeBannerData {
     public name: string,
     public description: string,
     public date: string,
+    public coverImage: string,
     public thumbnail: string,
     public href: string,
+    public layerClasses?: string,
   ) {}
 }

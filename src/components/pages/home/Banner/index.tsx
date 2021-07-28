@@ -35,8 +35,8 @@ const Banner: React.FunctionComponent<IBannerProps> = () => {
   const [current, setCurrent] = React.useState(0);
 
   const data = useStaticQuery(graphql`
-    query {
-      allFile(
+    {
+      thumbnails: allFile(
         filter: {
           sourceInstanceName: { eq: "assets" }
           relativePath: { eq: "home/ramez.jpg" }
@@ -54,23 +54,42 @@ const Banner: React.FunctionComponent<IBannerProps> = () => {
           }
         }
       }
+      covers: allFile(
+        filter: {
+          sourceInstanceName: { eq: "assets" }
+          relativePath: { eq: "home/hajalidancing.jpg" }
+        }
+      ) {
+        edges {
+          node {
+            childImageSharp {
+              gatsbyImageData(
+                quality: 90
+                placeholder: DOMINANT_COLOR
+                formats: [AUTO, WEBP]
+              )
+            }
+          }
+        }
+      }
     }
   `);
 
   // TODO
-  const image = getImage(data.allFile.edges[0].node);
+  const coverImage = getImage(data.covers.edges[0].node);
+
+  // TODO
+  const thumbnailImage = getImage(data.thumbnails.edges[0].node);
 
   return (
     <div className="relative h-screen bg-black">
-      <StaticImage
-        src="../../../../../assets/home/banner.jpg"
-        alt="Banner Image"
-        placeholder="dominantColor"
-        layout="fullWidth"
-        // TODO test load times
-        quality={90}
-        className="h-screen"
+      <GatsbyImage
+        className="h-screen "
+        image={coverImage}
+        alt="banner cover"
       />
+
+      <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-30" />
       <div className="absolute top-0 left-0 flex flex-col-reverse w-full h-full mx-auto text-white ">
         <div className="container flex mx-auto ">
           <div className="mb-24">
@@ -117,7 +136,11 @@ const Banner: React.FunctionComponent<IBannerProps> = () => {
               Auditorum INSAT
             </p>
             <div className="relative ">
-              <GatsbyImage className="rounded-lg " image={image} alt="jti" />
+              <GatsbyImage
+                className="rounded-lg "
+                image={thumbnailImage}
+                alt="jti"
+              />
               <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-30 " />
               <p className="absolute top-3 left-3 "> 3:23 </p>
             </div>
