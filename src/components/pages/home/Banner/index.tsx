@@ -13,11 +13,11 @@ const elements = [
   },
   {
     name: `Halloween`,
-    description: `Un Evenement des plus Important du club`,
+    description: `Un Evenement des plus\n Important du club`,
   },
   {
     name: `Hall Theatre`,
-    description: `Un Evenement des plus Important du club`,
+    description: `Un Evenement des plus\n Important du club`,
   },
 ];
 
@@ -64,6 +64,7 @@ const Banner: React.FunctionComponent<IBannerProps> = () => {
           node {
             childImageSharp {
               gatsbyImageData(
+                width: 1920
                 quality: 90
                 placeholder: DOMINANT_COLOR
                 formats: [AUTO, WEBP]
@@ -91,7 +92,7 @@ const Banner: React.FunctionComponent<IBannerProps> = () => {
 
       <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-30" />
       <div className="absolute top-0 left-0 flex flex-col-reverse w-full h-full mx-auto text-white ">
-        <div className="container flex mx-auto ">
+        <div className="container flex items-end mx-auto ">
           <div className="mb-24">
             <p className="mb-2 text-2xl tracking-widest text-white text-opacity-50">
               Theatro
@@ -130,7 +131,7 @@ const Banner: React.FunctionComponent<IBannerProps> = () => {
           </div>
 
           <div className="flex-grow" />
-          <div className="mt-8 ">
+          <div className="mb-32 ">
             <h2 className="mb-6 font-serif text-5xl text-white "> 12 / 02 </h2>
             <p className="mb-8 text-2xl text-white text-opacity-50">
               Auditorum INSAT
