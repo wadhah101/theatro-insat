@@ -35,7 +35,7 @@ const Logo: React.FunctionComponent<ILogoProps> = () => {
   return (
     <div>
       <GatsbyImage
-        className="w-20 h-20 rounded-full shadow "
+        className="w-16 h-16 rounded-full shadow "
         image={image}
         alt="logo"
       />
